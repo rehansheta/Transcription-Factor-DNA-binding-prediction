@@ -1,0 +1,99 @@
+
+Options: -F "weka.filters.unsupervised.attribute.RemoveType -T string" -W weka.classifiers.trees.J48 -- -C 0.1 
+
+FilteredClassifier using weka.classifiers.trees.J48 -C 0.1 -M 2 on data filtered through weka.filters.unsupervised.attribute.RemoveType -T string
+
+Filtered Header
+@relation experiment-weka.filters.unsupervised.attribute.RemoveType-Tstring
+
+@attribute MOTIF_1 numeric
+@attribute MOTIF_2 numeric
+@attribute MOTIF_3 numeric
+@attribute MOTIF_4 numeric
+@attribute MOTIF_5 numeric
+@attribute class {n,p}
+
+@data
+
+
+Classifier Model
+J48 pruned tree
+------------------
+
+MOTIF_1 <= 0: n (282.0)
+MOTIF_1 > 0
+|   MOTIF_3 <= 15
+|   |   MOTIF_3 <= 0.8
+|   |   |   MOTIF_1 <= 33
+|   |   |   |   MOTIF_4 <= 74
+|   |   |   |   |   MOTIF_1 <= 8.8: p (13.0)
+|   |   |   |   |   MOTIF_1 > 8.8
+|   |   |   |   |   |   MOTIF_1 <= 11: n (3.0)
+|   |   |   |   |   |   MOTIF_1 > 11: p (16.0/4.0)
+|   |   |   |   MOTIF_4 > 74: n (36.0/14.0)
+|   |   |   MOTIF_1 > 33: n (133.0/26.0)
+|   |   MOTIF_3 > 0.8: p (277.0/96.0)
+|   MOTIF_3 > 15: n (3240.0/754.0)
+
+Number of Leaves  : 	8
+
+Size of the tree : 	15
+
+
+Time taken to build model: 0.22 seconds
+Time taken to test model on training data: 0.1 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances        3106               77.65   %
+Incorrectly Classified Instances       894               22.35   %
+Kappa statistic                          0.2246
+Mean absolute error                      0.3369
+Root mean squared error                  0.4104
+Relative absolute error                 89.8163 %
+Root relative squared error             94.7793 %
+Total Number of Instances             4000     
+
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.967     0.794      0.785     0.967     0.866      0.63     n
+                 0.206     0.033      0.673     0.206     0.315      0.63     p
+Weighted Avg.    0.777     0.604      0.757     0.777     0.729      0.63 
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2900  100 |    a = n
+  794  206 |    b = p
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances        3099               77.475  %
+Incorrectly Classified Instances       901               22.525  %
+Kappa statistic                          0.2648
+Mean absolute error                      0.321 
+Root mean squared error                  0.4084
+Relative absolute error                 85.5954 %
+Root relative squared error             94.3132 %
+Total Number of Instances             4000     
+
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.941     0.725      0.796     0.941     0.862      0.701    n
+                 0.275     0.059      0.61      0.275     0.379      0.701    p
+Weighted Avg.    0.775     0.558      0.749     0.775     0.742      0.701
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2824  176 |    a = n
+  725  275 |    b = p
+

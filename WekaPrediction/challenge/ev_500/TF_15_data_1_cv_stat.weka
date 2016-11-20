@@ -1,0 +1,121 @@
+
+Options: -F "weka.filters.unsupervised.attribute.RemoveType -T string" -W weka.classifiers.trees.J48 -- -C 0.1 
+
+FilteredClassifier using weka.classifiers.trees.J48 -C 0.1 -M 2 on data filtered through weka.filters.unsupervised.attribute.RemoveType -T string
+
+Filtered Header
+@relation experiment-weka.filters.unsupervised.attribute.RemoveType-Tstring
+
+@attribute MOTIF_1 numeric
+@attribute MOTIF_2 numeric
+@attribute MOTIF_3 numeric
+@attribute MOTIF_4 numeric
+@attribute MOTIF_5 numeric
+@attribute class {n,p}
+
+@data
+
+
+Classifier Model
+J48 pruned tree
+------------------
+
+MOTIF_1 <= 1.1: n (529.0/4.0)
+MOTIF_1 > 1.1
+|   MOTIF_2 <= 4.5: n (426.0/43.0)
+|   MOTIF_2 > 4.5
+|   |   MOTIF_4 <= 0.47: n (239.0/26.0)
+|   |   MOTIF_4 > 0.47
+|   |   |   MOTIF_3 <= 16
+|   |   |   |   MOTIF_3 <= 0.38: n (243.0/92.0)
+|   |   |   |   MOTIF_3 > 0.38: p (109.0/26.0)
+|   |   |   MOTIF_3 > 16
+|   |   |   |   MOTIF_2 <= 5
+|   |   |   |   |   MOTIF_2 <= 4.8: n (8.0/3.0)
+|   |   |   |   |   MOTIF_2 > 4.8: p (24.0/1.0)
+|   |   |   |   MOTIF_2 > 5
+|   |   |   |   |   MOTIF_4 <= 2.5
+|   |   |   |   |   |   MOTIF_4 <= 0.78: p (13.0/5.0)
+|   |   |   |   |   |   MOTIF_4 > 0.78
+|   |   |   |   |   |   |   MOTIF_4 <= 1.2: n (8.0)
+|   |   |   |   |   |   |   MOTIF_4 > 1.2: p (26.0/7.0)
+|   |   |   |   |   MOTIF_4 > 2.5
+|   |   |   |   |   |   MOTIF_2 <= 75: n (1115.0/308.0)
+|   |   |   |   |   |   MOTIF_2 > 75
+|   |   |   |   |   |   |   MOTIF_2 <= 140
+|   |   |   |   |   |   |   |   MOTIF_2 <= 120
+|   |   |   |   |   |   |   |   |   MOTIF_2 <= 83: p (53.0/11.0)
+|   |   |   |   |   |   |   |   |   MOTIF_2 > 83: n (105.0/32.0)
+|   |   |   |   |   |   |   |   MOTIF_2 > 120: p (89.0/14.0)
+|   |   |   |   |   |   |   MOTIF_2 > 140
+|   |   |   |   |   |   |   |   MOTIF_2 <= 200
+|   |   |   |   |   |   |   |   |   MOTIF_2 <= 190: n (74.0/22.0)
+|   |   |   |   |   |   |   |   |   MOTIF_2 > 190: p (15.0/3.0)
+|   |   |   |   |   |   |   |   MOTIF_2 > 200
+|   |   |   |   |   |   |   |   |   MOTIF_1 <= 200: n (563.0/132.0)
+|   |   |   |   |   |   |   |   |   MOTIF_1 > 200
+|   |   |   |   |   |   |   |   |   |   MOTIF_1 <= 210: p (20.0/3.0)
+|   |   |   |   |   |   |   |   |   |   MOTIF_1 > 210: n (341.0/59.0)
+
+Number of Leaves  : 	19
+
+Size of the tree : 	37
+
+
+Time taken to build model: 0.31 seconds
+Time taken to test model on training data: 0.11 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances        3209               80.225  %
+Incorrectly Classified Instances       791               19.775  %
+Kappa statistic                          0.3265
+Mean absolute error                      0.2949
+Root mean squared error                  0.384 
+Relative absolute error                 78.6174 %
+Root relative squared error             88.6738 %
+Total Number of Instances             4000     
+
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.977     0.721      0.803     0.977     0.881      0.762    n
+                 0.279     0.023      0.799     0.279     0.414      0.762    p
+Weighted Avg.    0.802     0.547      0.802     0.802     0.764      0.762
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2930   70 |    a = n
+  721  279 |    b = p
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances        3143               78.575  %
+Incorrectly Classified Instances       857               21.425  %
+Kappa statistic                          0.2891
+Mean absolute error                      0.2969
+Root mean squared error                  0.3972
+Relative absolute error                 79.1457 %
+Root relative squared error             91.7275 %
+Total Number of Instances             4000     
+
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.955     0.723      0.799     0.955     0.87       0.75     n
+                 0.277     0.045      0.674     0.277     0.393      0.75     p
+Weighted Avg.    0.786     0.553      0.767     0.786     0.751      0.75 
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2866  134 |    a = n
+  723  277 |    b = p
+

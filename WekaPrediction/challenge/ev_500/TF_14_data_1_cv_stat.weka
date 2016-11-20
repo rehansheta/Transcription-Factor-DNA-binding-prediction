@@ -1,0 +1,113 @@
+
+Options: -F "weka.filters.unsupervised.attribute.RemoveType -T string" -W weka.classifiers.trees.J48 -- -C 0.1 
+
+FilteredClassifier using weka.classifiers.trees.J48 -C 0.1 -M 2 on data filtered through weka.filters.unsupervised.attribute.RemoveType -T string
+
+Filtered Header
+@relation experiment-weka.filters.unsupervised.attribute.RemoveType-Tstring
+
+@attribute MOTIF_1 numeric
+@attribute MOTIF_2 numeric
+@attribute MOTIF_3 numeric
+@attribute MOTIF_4 numeric
+@attribute MOTIF_5 numeric
+@attribute class {n,p}
+
+@data
+
+
+Classifier Model
+J48 pruned tree
+------------------
+
+MOTIF_1 <= 1.1: n (632.0/11.0)
+MOTIF_1 > 1.1
+|   MOTIF_2 <= 7.9: n (607.0/60.0)
+|   MOTIF_2 > 7.9
+|   |   MOTIF_2 <= 8: p (46.0/3.0)
+|   |   MOTIF_2 > 8
+|   |   |   MOTIF_4 <= 0.39: n (284.0/30.0)
+|   |   |   MOTIF_4 > 0.39
+|   |   |   |   MOTIF_3 <= 16
+|   |   |   |   |   MOTIF_3 <= 0.38: n (242.0/94.0)
+|   |   |   |   |   MOTIF_3 > 0.38: p (116.0/24.0)
+|   |   |   |   MOTIF_3 > 16
+|   |   |   |   |   MOTIF_4 <= 2.5: p (65.0/26.0)
+|   |   |   |   |   MOTIF_4 > 2.5
+|   |   |   |   |   |   MOTIF_3 <= 22: n (264.0/54.0)
+|   |   |   |   |   |   MOTIF_3 > 22
+|   |   |   |   |   |   |   MOTIF_3 <= 35
+|   |   |   |   |   |   |   |   MOTIF_2 <= 56: p (36.0/6.0)
+|   |   |   |   |   |   |   |   MOTIF_2 > 56
+|   |   |   |   |   |   |   |   |   MOTIF_1 <= 56: p (8.0/1.0)
+|   |   |   |   |   |   |   |   |   MOTIF_1 > 56
+|   |   |   |   |   |   |   |   |   |   MOTIF_5 <= 4.5: p (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   MOTIF_5 > 4.5: n (9.0)
+|   |   |   |   |   |   |   MOTIF_3 > 35
+|   |   |   |   |   |   |   |   MOTIF_2 <= 13: n (143.0/27.0)
+|   |   |   |   |   |   |   |   MOTIF_2 > 13
+|   |   |   |   |   |   |   |   |   MOTIF_2 <= 15: p (78.0/29.0)
+|   |   |   |   |   |   |   |   |   MOTIF_2 > 15: n (1467.0/462.0)
+
+Number of Leaves  : 	15
+
+Size of the tree : 	29
+
+
+Time taken to build model: 0.27 seconds
+Time taken to test model on training data: 0.1 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances        3172               79.3    %
+Incorrectly Classified Instances       828               20.7    %
+Kappa statistic                          0.2959
+Mean absolute error                      0.2964
+Root mean squared error                  0.385 
+Relative absolute error                 79.0208 %
+Root relative squared error             88.901  %
+Total Number of Instances             4000     
+
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.97      0.738      0.798     0.97      0.875      0.772    n
+                 0.262     0.03       0.744     0.262     0.388      0.772    p
+Weighted Avg.    0.793     0.561      0.784     0.793     0.753      0.772
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2910   90 |    a = n
+  738  262 |    b = p
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances        3144               78.6    %
+Incorrectly Classified Instances       856               21.4    %
+Kappa statistic                          0.2569
+Mean absolute error                      0.3043
+Root mean squared error                  0.3932
+Relative absolute error                 81.145  %
+Root relative squared error             90.8141 %
+Total Number of Instances             4000     
+
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.973     0.776      0.79      0.973     0.872      0.746    n
+                 0.224     0.027      0.737     0.224     0.344      0.746    p
+Weighted Avg.    0.786     0.589      0.777     0.786     0.74       0.746
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2920   80 |    a = n
+  776  224 |    b = p
+

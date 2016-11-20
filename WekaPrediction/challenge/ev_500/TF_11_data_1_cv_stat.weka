@@ -1,0 +1,171 @@
+
+Options: -F "weka.filters.unsupervised.attribute.RemoveType -T string" -W weka.classifiers.trees.J48 -- -C 0.1 
+
+FilteredClassifier using weka.classifiers.trees.J48 -C 0.1 -M 2 on data filtered through weka.filters.unsupervised.attribute.RemoveType -T string
+
+Filtered Header
+@relation experiment-weka.filters.unsupervised.attribute.RemoveType-Tstring
+
+@attribute MOTIF_1 numeric
+@attribute MOTIF_2 numeric
+@attribute MOTIF_3 numeric
+@attribute MOTIF_4 numeric
+@attribute MOTIF_5 numeric
+@attribute class {n,p}
+
+@data
+
+
+Classifier Model
+J48 pruned tree
+------------------
+
+MOTIF_1 <= 0.0091: n (910.0/21.0)
+MOTIF_1 > 0.0091
+|   MOTIF_2 <= 54
+|   |   MOTIF_4 <= 0.67: n (481.0/41.0)
+|   |   MOTIF_4 > 0.67
+|   |   |   MOTIF_4 <= 100
+|   |   |   |   MOTIF_2 <= 8.3: n (572.0/80.0)
+|   |   |   |   MOTIF_2 > 8.3
+|   |   |   |   |   MOTIF_2 <= 10
+|   |   |   |   |   |   MOTIF_2 <= 9.4
+|   |   |   |   |   |   |   MOTIF_5 <= 0.03: p (7.0/1.0)
+|   |   |   |   |   |   |   MOTIF_5 > 0.03: n (20.0/2.0)
+|   |   |   |   |   |   MOTIF_2 > 9.4
+|   |   |   |   |   |   |   MOTIF_5 <= 310: p (53.0/11.0)
+|   |   |   |   |   |   |   MOTIF_5 > 310: n (3.0)
+|   |   |   |   |   MOTIF_2 > 10
+|   |   |   |   |   |   MOTIF_4 <= 10
+|   |   |   |   |   |   |   MOTIF_5 <= 210
+|   |   |   |   |   |   |   |   MOTIF_2 <= 26: n (78.0/18.0)
+|   |   |   |   |   |   |   |   MOTIF_2 > 26
+|   |   |   |   |   |   |   |   |   MOTIF_2 <= 28: p (6.0)
+|   |   |   |   |   |   |   |   |   MOTIF_2 > 28
+|   |   |   |   |   |   |   |   |   |   MOTIF_4 <= 1.5
+|   |   |   |   |   |   |   |   |   |   |   MOTIF_4 <= 0.91
+|   |   |   |   |   |   |   |   |   |   |   |   MOTIF_4 <= 0.7: p (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   MOTIF_4 > 0.7: n (3.0)
+|   |   |   |   |   |   |   |   |   |   |   MOTIF_4 > 0.91: p (7.0)
+|   |   |   |   |   |   |   |   |   |   MOTIF_4 > 1.5: n (63.0/23.0)
+|   |   |   |   |   |   |   MOTIF_5 > 210
+|   |   |   |   |   |   |   |   MOTIF_2 <= 16: n (2.0)
+|   |   |   |   |   |   |   |   MOTIF_2 > 16: p (17.0/1.0)
+|   |   |   |   |   |   MOTIF_4 > 10
+|   |   |   |   |   |   |   MOTIF_3 <= 31
+|   |   |   |   |   |   |   |   MOTIF_3 <= 8.6
+|   |   |   |   |   |   |   |   |   MOTIF_3 <= 1.5: n (104.0/15.0)
+|   |   |   |   |   |   |   |   |   MOTIF_3 > 1.5: p (41.0/13.0)
+|   |   |   |   |   |   |   |   MOTIF_3 > 8.6
+|   |   |   |   |   |   |   |   |   MOTIF_3 <= 23: n (85.0/17.0)
+|   |   |   |   |   |   |   |   |   MOTIF_3 > 23
+|   |   |   |   |   |   |   |   |   |   MOTIF_4 <= 50
+|   |   |   |   |   |   |   |   |   |   |   MOTIF_4 <= 26
+|   |   |   |   |   |   |   |   |   |   |   |   MOTIF_1 <= 38: p (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   MOTIF_1 > 38: n (3.0)
+|   |   |   |   |   |   |   |   |   |   |   MOTIF_4 > 26: p (6.0)
+|   |   |   |   |   |   |   |   |   |   MOTIF_4 > 50: n (8.0/2.0)
+|   |   |   |   |   |   |   MOTIF_3 > 31: n (233.0/33.0)
+|   |   |   MOTIF_4 > 100
+|   |   |   |   MOTIF_4 <= 190
+|   |   |   |   |   MOTIF_4 <= 120
+|   |   |   |   |   |   MOTIF_3 <= 85: n (23.0/7.0)
+|   |   |   |   |   |   MOTIF_3 > 85: p (3.0)
+|   |   |   |   |   MOTIF_4 > 120: p (71.0/15.0)
+|   |   |   |   MOTIF_4 > 190: n (175.0/55.0)
+|   MOTIF_2 > 54
+|   |   MOTIF_2 <= 55: p (208.0/31.0)
+|   |   MOTIF_2 > 55
+|   |   |   MOTIF_2 <= 340
+|   |   |   |   MOTIF_2 <= 210
+|   |   |   |   |   MOTIF_2 <= 99
+|   |   |   |   |   |   MOTIF_1 <= 230: n (365.0/96.0)
+|   |   |   |   |   |   MOTIF_1 > 230
+|   |   |   |   |   |   |   MOTIF_1 <= 360: p (17.0/3.0)
+|   |   |   |   |   |   |   MOTIF_1 > 360: n (16.0/5.0)
+|   |   |   |   |   MOTIF_2 > 99
+|   |   |   |   |   |   MOTIF_1 <= 150
+|   |   |   |   |   |   |   MOTIF_4 <= 260
+|   |   |   |   |   |   |   |   MOTIF_4 <= 0.0075: n (21.0/8.0)
+|   |   |   |   |   |   |   |   MOTIF_4 > 0.0075: p (130.0/32.0)
+|   |   |   |   |   |   |   MOTIF_4 > 260: n (20.0/6.0)
+|   |   |   |   |   |   MOTIF_1 > 150
+|   |   |   |   |   |   |   MOTIF_1 <= 240: n (27.0/2.0)
+|   |   |   |   |   |   |   MOTIF_1 > 240
+|   |   |   |   |   |   |   |   MOTIF_1 <= 260: p (7.0)
+|   |   |   |   |   |   |   |   MOTIF_1 > 260
+|   |   |   |   |   |   |   |   |   MOTIF_4 <= 26: p (5.0)
+|   |   |   |   |   |   |   |   |   MOTIF_4 > 26
+|   |   |   |   |   |   |   |   |   |   MOTIF_3 <= 60
+|   |   |   |   |   |   |   |   |   |   |   MOTIF_4 <= 34: n (4.0)
+|   |   |   |   |   |   |   |   |   |   |   MOTIF_4 > 34: p (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   MOTIF_3 > 60: n (7.0)
+|   |   |   |   MOTIF_2 > 210: n (101.0/16.0)
+|   |   |   MOTIF_2 > 340
+|   |   |   |   MOTIF_1 <= 62: p (68.0/2.0)
+|   |   |   |   MOTIF_1 > 62
+|   |   |   |   |   MOTIF_3 <= 13: p (9.0/3.0)
+|   |   |   |   |   MOTIF_3 > 13: n (9.0)
+
+Number of Leaves  : 	44
+
+Size of the tree : 	87
+
+
+Time taken to build model: 0.26 seconds
+Time taken to test model on training data: 0.11 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances        3439               85.975  %
+Incorrectly Classified Instances       561               14.025  %
+Kappa statistic                          0.5793
+Mean absolute error                      0.2221
+Root mean squared error                  0.3332
+Relative absolute error                 59.2105 %
+Root relative squared error             76.9548 %
+Total Number of Instances             4000     
+
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.962     0.447      0.866     0.962     0.911      0.862    n
+                 0.553     0.038      0.829     0.553     0.663      0.862    p
+Weighted Avg.    0.86      0.345      0.857     0.86      0.849      0.862
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2886  114 |    a = n
+  447  553 |    b = p
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances        3348               83.7    %
+Incorrectly Classified Instances       652               16.3    %
+Kappa statistic                          0.5079
+Mean absolute error                      0.2392
+Root mean squared error                  0.3618
+Relative absolute error                 63.7769 %
+Root relative squared error             83.5438 %
+Total Number of Instances             4000     
+
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.95      0.501      0.85      0.95      0.897      0.817    n
+                 0.499     0.05       0.768     0.499     0.605      0.817    p
+Weighted Avg.    0.837     0.388      0.83      0.837     0.824      0.817
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2849  151 |    a = n
+  501  499 |    b = p
+
